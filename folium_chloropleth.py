@@ -3,15 +3,15 @@ import pandas as pd
 
 
 uk_geo = 'result.json'
-gb_data_csv = f'GB_data.csv'
-gb_data = pd.read_csv(gb_data_csv)
+uk_data_csv = f'UK_data.csv'
+uk_data = pd.read_csv(uk_data_csv)
 
 m = folium.Map(location=[54, -2], zoom_start=6)
 
 folium.Choropleth(
     geo_data=uk_geo,
     name='choropleth',
-    data=gb_data,
+    data=uk_data,
     columns=['objectid', 'Amount'],
     key_on='id',
     fill_color='YlGn',

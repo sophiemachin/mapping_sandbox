@@ -1,11 +1,13 @@
 """This cleans data from
 
-https://data.gov.uk/dataset/3b2fde41-decf-4d5e-8642-95dd8127ac23/european-electoral-regions-december-2016-generalised-clipped-boundaries-in-great-britain
+https://data.gov.uk/dataset/5c23bf46-3dea-40bf-8f81-0e6f9095c9f6/european-electoral-regions-december-2018-boundaries-uk-bgc
+
+(BGC) Generalised (20m)
 
 """
 
 import json
-uk_geo = 'European_Electoral_Regions__December_2016__Boundaries.geojson'
+uk_geo = 'European_Electoral_Regions__December_2018__Boundaries_UK_BGC.geojson'
 
 
 cleaned = {
@@ -21,7 +23,7 @@ with open(uk_geo) as json_file:
             "type": "Feature",
             "id": d['properties']['objectid'],
             "properties": {
-                'name': d['properties']['eer16nm']
+                'name': d['properties']['eer18nm']
             },
             'geometry' : d['geometry']
         }
