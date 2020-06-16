@@ -1,3 +1,9 @@
+"""Folium sandbox from the tutorial here:
+
+https://python-visualization.github.io/folium/quickstart.html
+
+"""
+
 import folium
 
 
