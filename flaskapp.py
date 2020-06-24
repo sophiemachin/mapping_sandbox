@@ -14,11 +14,20 @@
 
 """
 
-from flask import Flask
+from flask import Flask, render_template
 
 import folium
 import pandas as pd
 app = Flask(__name__)
+
+@app.route('/static')
+def load_static():
+    return app.send_static_file('screenie.html')
+
+
+@app.route('/template')
+def load_template():
+    return render_template('test_template.html', image='static/screenie.png')
 
 
 @app.route('/')
