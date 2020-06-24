@@ -1,3 +1,5 @@
+"""Build an html file that contains the map of the UK divided into regions"""
+
 import folium
 import pandas as pd
 
