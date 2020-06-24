@@ -6,7 +6,12 @@ uk_geo = 'result.json'
 uk_data_csv = f'UK_data.csv'
 uk_data = pd.read_csv(uk_data_csv)
 
-m = folium.Map(location=[54, -2], zoom_start=6)
+m = folium.Map(
+    location=[54, -2],
+    zoom_start=6,
+    tiles='Mapbox Bright',
+)
+
 
 folium.Choropleth(
     geo_data=uk_geo,
