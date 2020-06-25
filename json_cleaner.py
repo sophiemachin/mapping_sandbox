@@ -7,7 +7,7 @@ https://data.gov.uk/dataset/5c23bf46-3dea-40bf-8f81-0e6f9095c9f6/european-electo
 """
 
 import json
-uk_geo = 'European_Electoral_Regions__December_2018__Boundaries_UK_BGC.geojson'
+uk_geo = 'resources/European_Electoral_Regions__December_2018__Boundaries_UK_BGC.json'
 
 
 cleaned = {
