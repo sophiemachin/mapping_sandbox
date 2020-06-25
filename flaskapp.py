@@ -43,7 +43,7 @@ def index():
         tiles='Mapbox Bright',
     )
 
-    folium.Choropleth(
+    chloropleth = folium.Choropleth(
         geo_data=uk_geo,
         name='choropleth',
         data=uk_data,
@@ -54,7 +54,11 @@ def index():
         line_opacity=0.5,
         legend_name='Accent',
     ).add_to(m)
-    
+
+    chloropleth.geojson.add_child(
+        folium.features.GeoJsonTooltip(['name'], labels=False)
+    )
+
     return m._repr_html_()
 
 
