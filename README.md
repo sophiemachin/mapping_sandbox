@@ -2,6 +2,8 @@
 
 ## General information
 
+![sdf](https://github.com/sophiemachin/mapping_sandbox/blob/master/static/screenie.png)
+
 A sandbox environment for testing folium chloropleth maps
 
 The folium project can be viewed here:
