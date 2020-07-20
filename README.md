@@ -16,7 +16,7 @@ This project takes CSV data and json map files and combines them into html that 
 
 To run the server:
 
-  python flaskapp.py
+    python flaskapp.py
   
 You can then make calls to http://127.0.0.1:5000
 
@@ -29,7 +29,9 @@ The project also has files to generate one-off html files for static sites. To g
 
 #### Json cleaner
 
-`json_cleaner.py` cleans files from http://geoportal.statistics.gov.uk/search 
+`json_cleaner.py` cleans files from http://geoportal.statistics.gov.uk/search
+
+    python json_cleaner.py
 
 Each type of file is slightly different. It is currently set up to clean European Electoral Regions December 2018 Boundaries UK.
 
@@ -39,7 +41,11 @@ The CSV data should have the same regions as the map regions, and a possible dat
 
 #### Generate the html
 
-Run `folium_chloropleth.py` to generate an html file. It is currently set up to read the output from the json cleaner above. The html is not centred or zoomed perfectly on the UK, rather it is a compromise between showing the mainland in as much detail as possible while also included as many islands as possible. 
+Run `folium_chloropleth.py` to generate an html file. 
+
+    python folium_cloropleth.py
+    
+It is currently set up to read the output from the json cleaner above. The html is not centred or zoomed perfectly on the UK, rather it is a compromise between showing the mainland in as much detail as possible while also included as many islands as possible. 
 
 
 The output html file can be used, for example, in an iframe in a static website. 
